@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * la rotta ritorna nella pagina principale (/) il controller (TrainsController) e la sua funzione
+ * index
+ */
+Route::get('/', "TrainsController@index");
