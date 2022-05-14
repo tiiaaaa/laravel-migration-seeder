@@ -2,12 +2,19 @@
 
 @section("main-content")
     <div class="container-fluid">
-        <section class="row">
+        <section class="row p-4">
             @foreach ($trains as $train )
                 <div class="col-4">
-
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                    {{-- Singola Card raffigurante ogni treno --}}
+                    <div class="card border border-2 border-dark">
+                        {{-- Wrapper dell'immagine --}}
+                        <div class="train-immage border-bottom border-2 border-dark d-flex align-items-center justify-content-center">
+                            @if ($train->url_immage)
+                                <img src="{{$train->url_immage}}" class="card-img-top" alt="Train Immage">
+                            @else
+                                <p>Immagine non disponibile</p>
+                            @endif
+                        </div>
 
                         <div class="card-body p-3">
                             {{-- Riepilogo orari date e destinazione --}}

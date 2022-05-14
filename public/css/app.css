@@ -11243,3 +11243,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+div.card div.train-immage {
+  height: 230px;
+  background-color: #e2dbe4;
+}
+div.card div.train-immage img {
+  height: 100%;
+}
