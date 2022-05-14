@@ -12,9 +12,16 @@ use App\Train;
  */
 class TrainsController extends Controller
 {
+    /**
+     * Attraverso metodo index() recupera tutti i treni dal database tramite model Train,
+     * fa la richieta query tramite metodo statico all() e salva tutti i dati restituiti in $trains
+     * infine ritorna la view in index con l'array dei treni recuperati
+     */
     public function index(){
 
+        $trainModel = new Train();
+        $trains = $trainModel::all();
 
-        return view("trains.index");
+        return view("trains.index", compact('trains'));
     }
 }
