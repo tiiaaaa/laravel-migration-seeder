@@ -21,10 +21,11 @@ class TrainTableSeeder extends Seeder
             $newTrain->departure_date = $faker->date();
             $newTrain->departure_time = $faker->time();
             $newTrain->arrival_time = $faker->time();
-            $newTrain->train_code = $faker->ean8();
-            $newTrain->train_wagons = $faker->randomNumber(2);
+            $newTrain->url_immage = $faker->imageUrl(400, 300, 'trains', true);
+            $newTrain->train_code = $faker->randomNumber(4, true);
+            $newTrain->train_wagons = $faker->randomNumber(2, false);
             $newTrain->is_in_time = $faker->boolean();
-            $newTrain->is_in_time = $faker->boolean();
+            $newTrain->was_deleted = $faker->boolean();
             $newTrain->save();
         }
     }

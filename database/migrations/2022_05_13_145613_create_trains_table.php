@@ -22,7 +22,7 @@ class CreateTrainsTable extends Migration
             $table->time('departure_time');
             $table->time('arrival_time');
             $table->mediumInteger('train_code');
-            $table->integer('train_wagons');
+            $table->tinyInteger('train_wagons');
             $table->boolean('is_in_time');
             $table->boolean('was_deleted');
             $table->timestamps();
