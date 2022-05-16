@@ -1,10 +1,12 @@
 @extends("layouts.main")
 
+@section('title', 'Trains')
+
 @section("main-content")
     <div class="container-fluid">
         <section class="row p-4">
             @foreach ($trains as $train )
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     {{-- Singola Card raffigurante ogni treno --}}
                     <div class="card border border-2 border-dark">
                         {{-- Wrapper dell'immagine --}}

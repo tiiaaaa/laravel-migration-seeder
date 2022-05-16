@@ -25,7 +25,10 @@ class TrainsController extends Controller
         return view("trains.index", compact('trains'));
     }
 
-    public function show(){
+    public function show($id){
 
+        $train = Train::findOrFail($id);
+
+        return view("trains.show", ['train'=> $train]);
     }
 }

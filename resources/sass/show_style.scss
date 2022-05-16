@@ -1,0 +1,17 @@
+section.row{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    div.col-6{
+        height: 90%;
+
+        div.card{
+            height: 100%;
+
+            div.train-immage{
+                height: 300px;
+            }
+        }
+    }
+}
