@@ -24,4 +24,8 @@ class TrainsController extends Controller
 
         return view("trains.index", compact('trains'));
     }
+
+    public function show(){
+
+    }
 }
